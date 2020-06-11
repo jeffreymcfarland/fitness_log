@@ -2,12 +2,12 @@ const path = require("path")
 const router = require("express").Router();
 
 // ROUTE TO exercise.html
-router.get("/", function(req, res) {
+router.get("/", (req, res) => {
     res.sendFile(path.resolve("public/index.html"));
 });
 
 // ROUTE TO exercise.html
-router.get("/exercise", function(req, res) {
+router.get("/exercise", (req, res) => {
     res.sendFile(path.resolve("public/exercise.html"));
 });
 
