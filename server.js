@@ -16,7 +16,7 @@ app.use(express.static("public"));
 
 // If deployed, us deployed database. Otherwise use local workout database.
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
-  useNewUrlParser: true
+  useNewUrlParser: true, useFindAndModify: false
 });
 
 // routes
